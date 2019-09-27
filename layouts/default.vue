@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <Navbar />hoppers &mdash; Colorlib e-Commerce Template
     <Header />
     <nuxt />
     <Footer />
@@ -17,6 +17,7 @@ export default {
     Navbar,
     Header,
     Footer
-  }
+  },
+  head () {}
 }
 </script>
