@@ -2,4 +2,8 @@
   .site-navbar-top--fixed-margin-bottom {
     margin-bottom: 65px;
   }
+
+  .site-navigation.position-fixed {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
 }

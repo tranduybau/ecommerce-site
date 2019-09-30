@@ -25,7 +25,7 @@ export default {
       { src: '/js/aos.js' }
     ]
   },
-  loading: { color: '#fff' },
+  loading: '~/layouts/v-base/Loading',
 
   css: [
     '@/assets/css/bootstrap.css',

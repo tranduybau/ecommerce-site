@@ -1,6 +1,6 @@
 <template>
-  <li class=" active" :class="`${data.hasChildren ? 'has-children' : ''}`">
-    <nuxt-link to="index.html">
+  <li :class="`${data.hasChildren ? 'has-children' : ''}`">
+    <nuxt-link :to="data.linkTo">
       {{ data.title }}
     </nuxt-link>
     <ul v-if="data.hasChildren" class="dropdown">

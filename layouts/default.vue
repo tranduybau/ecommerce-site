@@ -18,6 +18,17 @@ export default {
     Header,
     Footer
   },
-  head () {}
+  mounted () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      this.$nuxt.$loading.finish()
+    })
+  },
+  updated () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      this.$nuxt.$loading.finish()
+    })
+  }
 }
 </script>

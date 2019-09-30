@@ -13,3 +13,7 @@
 .left-100 {
   left: 100%;
 }
+
+.transition-normal {
+  transition: 0.3s all ease-in;
+}

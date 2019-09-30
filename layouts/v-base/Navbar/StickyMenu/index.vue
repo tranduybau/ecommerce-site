@@ -1,5 +1,5 @@
 <template>
-  <nav id="jsStickyMenu" class="site-navigation text-right text-md-center top-0 left-0 w-100 bg-white" role="navigation">
+  <nav id="jsStickyMenu" class="site-navigation text-right text-md-center top-0 left-0 w-100 bg-white transition-normal" role="navigation">
     <div class="container">
       <ul class="site-menu js-clone-nav d-none d-md-block">
         <template v-for="(item, index) in menuList">
@@ -24,7 +24,6 @@ export default {
           title: 'home',
           linkTo: '/',
           hasChildren: true,
-          listPosition: 'top-100',
           childrenList: [
             {
               title: 'Menu One',
@@ -45,7 +44,6 @@ export default {
               title: 'Sub Menu',
               linkTo: '/',
               hasChildren: true,
-              listPosition: 'left-100',
               childrenList: [
                 {
                   title: 'Menu One',
@@ -90,28 +88,11 @@ export default {
           ]
         }, {
           title: 'about',
-          linkTo: '/',
-          hasChildren: true,
-          childrenList: [
-            {
-              title: 'Menu One',
-              linkTo: '/',
-              hasChildren: false
-            },
-            {
-              title: 'Menu Two',
-              linkTo: '/',
-              hasChildren: false
-            },
-            {
-              title: 'Menu Three',
-              linkTo: '/',
-              hasChildren: false
-            }
-          ]
+          linkTo: '/about',
+          hasChildren: false
         }, {
           title: 'shop',
-          linkTo: '',
+          linkTo: '/shop',
           hasChildren: false
         }, {
           title: 'catalogue',
@@ -123,7 +104,7 @@ export default {
           hasChildren: false
         }, {
           title: 'contact',
-          linkTo: '',
+          linkTo: '/contact',
           hasChildren: false
         }
       ]
