@@ -1,8 +1,5 @@
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -26,45 +23,29 @@ export default {
       { src: '/js/owl.carousel.min.js' },
       { src: '/js/jquery.magnific-popup.min.js' },
       { src: '/js/aos.js' }
-      // { src: '/js/main.js' }
     ]
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
 
   css: [
+    '@/assets/css/bootstrap.css',
     '@/assets/css/bootstrap.min.css',
     '@/assets/css/magnific-popup.css',
     '@/assets/css/jquery-ui.css',
     '@/assets/css/owl.carousel.min.css',
     '@/assets/css/owl.theme.default.min.css',
     '@/assets/css/aos.css',
-    '@/assets/css/style.css'
+    '@/assets/css/style.css',
+    '@/assets/css/atomic.css',
+    '@/assets/css/bem.css'
   ],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ],
-  /*
-   ** Nuxt.js modules
-   */
+  buildModules: ['@nuxtjs/eslint-module'],
   modules: [],
-  /*
-   ** Build configuration
-   */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend (config, ctx) {}
+  },
+  server: {
+    port: 3333
   }
 }

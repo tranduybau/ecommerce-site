@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />hoppers &mdash; Colorlib e-Commerce Template
+    <Navbar />
     <Header />
     <nuxt />
     <Footer />
