@@ -48,8 +48,8 @@ export default {
       } else {
         return this.$route.path.substring(1, this.$route.path.length);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

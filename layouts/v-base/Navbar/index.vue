@@ -58,8 +58,8 @@
 import StickyMenu from "./StickyMenu";
 export default {
   components: {
-    StickyMenu
-  }
+    StickyMenu,
+  },
 };
 </script>
 

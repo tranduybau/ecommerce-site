@@ -15,7 +15,7 @@ import MenuWrap from "../MenuWrap";
 export default {
   name: "StickyMenu",
   components: {
-    MenuWrap
+    MenuWrap,
   },
   data() {
     return {
@@ -28,17 +28,17 @@ export default {
             {
               title: "Menu One",
               linkTo: "/",
-              hasChildren: false
+              hasChildren: false,
             },
             {
               title: "Menu Two",
               linkTo: "/",
-              hasChildren: false
+              hasChildren: false,
             },
             {
               title: "Menu Three",
               linkTo: "/",
-              hasChildren: false
+              hasChildren: false,
             },
             {
               title: "Sub Menu",
@@ -48,17 +48,17 @@ export default {
                 {
                   title: "Menu One",
                   linkTo: "/",
-                  hasChildren: false
+                  hasChildren: false,
                 },
                 {
                   title: "Menu Two",
                   linkTo: "/",
-                  hasChildren: false
+                  hasChildren: false,
                 },
                 {
                   title: "Menu Three",
                   linkTo: "/",
-                  hasChildren: false
+                  hasChildren: false,
                 },
                 {
                   title: "Sub Menu",
@@ -69,37 +69,37 @@ export default {
                     {
                       title: "Menu One",
                       linkTo: "/",
-                      hasChildren: false
+                      hasChildren: false,
                     },
                     {
                       title: "Menu Two",
                       linkTo: "/",
-                      hasChildren: false
+                      hasChildren: false,
                     },
                     {
                       title: "Menu Three",
                       linkTo: "/",
-                      hasChildren: false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+                      hasChildren: false,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         }, {
           title: "about",
           linkTo: "/about",
-          hasChildren: false
+          hasChildren: false,
         }, {
           title: "shop",
           linkTo: "/shop",
-          hasChildren: false
+          hasChildren: false,
         }, {
           title: "contact",
           linkTo: "/contact",
-          hasChildren: false
-        }
-      ]
+          hasChildren: false,
+        },
+      ],
     };
   },
   mounted() {
@@ -115,7 +115,7 @@ export default {
         document.getElementById("jsSiteNavbarTop").classList.remove("site-navbar-top--fixed-margin-bottom");
       }
     };
-  }
+  },
 };
 </script>
 

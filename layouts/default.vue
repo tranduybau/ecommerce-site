@@ -16,13 +16,13 @@ export default {
   components: {
     Navbar,
     Header,
-    Footer
+    Footer,
   },
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start();
       this.$nuxt.$loading.finish(1000);
     });
-  }
+  },
 };
 </script>

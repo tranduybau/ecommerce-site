@@ -24,13 +24,13 @@ export default {
           title: "",
           linkTo: "",
           hasChildren: false,
-          childrenList: []
+          childrenList: [],
         };
-      }
-    }
+      },
+    },
   },
   mounted() {
-  }
+  },
 };
 </script>
 

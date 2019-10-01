@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      loading: false
+      loading: false,
     };
   },
   watch: {
@@ -22,7 +22,7 @@ export default {
         document.getElementById("__layout").classList.remove("opacity-0");
         document.body.classList.remove("overflow-hidden");
       }
-    }
+    },
   },
   methods: {
     start() {
@@ -32,8 +32,8 @@ export default {
       setTimeout(() => {
         this.loading = false;
       }, countdown);
-    }
-  }
+    },
+  },
 };
 </script>
 

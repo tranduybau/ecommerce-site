@@ -47,7 +47,7 @@ module.exports = {
         properties: 'always',
       },
     ],
-    'comma-dangle': [2, 'never'],
+    'comma-dangle': [2, 'always-multiline'],
     'comma-spacing': [
       2,
       {
@@ -76,7 +76,7 @@ module.exports = {
         SwitchCase: 1,
       },
     ],
-    'jsx-quotes': [2, 'prefer-single'],
+    'jsx-quotes': [2, 'prefer-double'],
     'key-spacing': [
       2,
       {

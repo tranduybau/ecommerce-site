@@ -2,12 +2,12 @@
   <main>
     <FeaturesIntro />
     <CategoriesBlock />
-
     <div class="site-section block-3 site-blocks-2 bg-light">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 site-section-heading text-center pt-4">
             <h2>Featured Products</h2>
+            {{ readFromFirestore() }}
           </div>
         </div>
         <div class="row">
@@ -135,8 +135,24 @@ import FeaturesIntro from "~/components/FeaturesIntro";
 export default {
   components: {
     CategoriesBlock,
-    FeaturesIntro
-  }
+    FeaturesIntro,
+  },
+  data() {
+    return {
+      data: {},
+    };
+  },
+  methods: {
+    async readFromFirestore() {
+      const messageRef = await this.$fireDb.ref("products");
+      try {
+        const snapshot = await messageRef.once("value");
+        console.warn(snapshot.val().message);
+      } catch (e) {
+        console.warn(e);
+      }
+    },
+  },
 };
 
 </script>

@@ -1,5 +1,5 @@
 {
-  "prettier.singleQuote": true,
+  "prettier.singleQuote": false,
   "eslint.options": {
     "comma-dangle": "never"
   }

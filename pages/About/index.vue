@@ -117,8 +117,8 @@
 import FeaturesIntro from "~/components/FeaturesIntro";
 export default {
   components: {
-    FeaturesIntro
-  }
+    FeaturesIntro,
+  },
 };
 </script>
 

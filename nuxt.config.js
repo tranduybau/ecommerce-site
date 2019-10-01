@@ -8,12 +8,12 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: process.env.npm_package_description || "",
+      },
     ],
     link: [
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Mukta:300,400,700" },
-      { rel: "stylesheet", href: "/fonts/icomoon/style.css" }
+      { rel: "stylesheet", href: "/fonts/icomoon/style.css" },
     ],
     script: [
       { src: "/js/jquery-3.3.1.min.js" },
@@ -22,8 +22,8 @@ export default {
       { src: "/js/bootstrap.min.js" },
       { src: "/js/owl.carousel.min.js" },
       { src: "/js/jquery.magnific-popup.min.js" },
-      { src: "/js/aos.js" }
-    ]
+      { src: "/js/aos.js" },
+    ],
   },
   loading: "~/layouts/v-base/Loading",
 
@@ -37,15 +37,50 @@ export default {
     "@/assets/css/aos.css",
     "@/assets/css/style.css",
     "@/assets/css/atomic.css",
-    "@/assets/css/bem.css"
+    "@/assets/css/bem.css",
   ],
   plugins: [],
   buildModules: ["@nuxtjs/eslint-module"],
-  modules: [],
+  modules: ["nuxt-fire"],
   build: {
-    extend(config, ctx) {}
+    extend(config, ctx) {},
   },
   server: {
-    port: 3333
-  }
+    port: 3333,
+  },
+
+  fire: {
+    useOnly: [
+      "auth",
+      "firestore",
+      "functions",
+      "storage",
+      "realtimeDb",
+      "messaging",
+      "performance",
+    ],
+    functionsLocation: "us-central1",
+    config: {
+      development: {
+        apiKey: "AIzaSyDQ7qJ8yKhblKOy3GkZsdAeU8ajFFuQVfA",
+        authDomain: "bauer-eb166.firebaseapp.com",
+        databaseURL: "https://bauer-eb166.firebaseio.com",
+        projectId: "bauer-eb166",
+        storageBucket: "bauer-eb166.appspot.com",
+        messagingSenderId: "149489874428",
+        appId: "1:149489874428:web:4fbeb50cfc152cb5052e79",
+        measurementId: "G-MLVEYN2S4Z",
+      },
+      production: {
+        apiKey: "AIzaSyDQ7qJ8yKhblKOy3GkZsdAeU8ajFFuQVfA",
+        authDomain: "bauer-eb166.firebaseapp.com",
+        databaseURL: "https://bauer-eb166.firebaseio.com",
+        projectId: "bauer-eb166",
+        storageBucket: "bauer-eb166.appspot.com",
+        messagingSenderId: "149489874428",
+        appId: "1:149489874428:web:4fbeb50cfc152cb5052e79",
+        measurementId: "G-MLVEYN2S4Z",
+      },
+    },
+  },
 };
