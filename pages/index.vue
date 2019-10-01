@@ -7,7 +7,6 @@
         <div class="row justify-content-center">
           <div class="col-md-7 site-section-heading text-center pt-4">
             <h2>Featured Products</h2>
-            {{ readFromFirestore() }}
           </div>
         </div>
         <div class="row">
@@ -104,6 +103,9 @@
         <div class="row justify-content-center  mb-5">
           <div class="col-md-7 site-section-heading text-center pt-4">
             <h2>Big Sale!</h2>
+            <button @click="readFromRealtimeDb()">
+              click here
+            </button>
           </div>
         </div>
         <div class="row align-items-center">
@@ -143,13 +145,13 @@ export default {
     };
   },
   methods: {
-    async readFromFirestore() {
-      const messageRef = await this.$fireDb.ref("products");
+    async readFromRealtimeDb() {
+      const messageRef = this.$fireDb.ref("products");
       try {
         const snapshot = await messageRef.once("value");
-        console.warn(snapshot.val().message);
+        console.warn(snapshot.val());
       } catch (e) {
-        console.warn(e);
+        alert(e);
       }
     },
   },

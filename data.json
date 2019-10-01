@@ -1,0 +1,38 @@
+{
+  "products": [{
+    "id": "1",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }, {
+    "id": "2",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }, {
+    "id": "3",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }, {
+    "id": "4",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }, {
+    "id": "5",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }, {
+    "id": "6",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }, {
+    "id": "7",
+    "name": "tank top",
+    "price": "50",
+    "description": "lorem is sola bla bla bla bla bla bla bla bla bla"
+  }]
+}
