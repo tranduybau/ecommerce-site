@@ -40,17 +40,17 @@
 <script>
 export default {
   computed: {
-    formatRoute () {
-      const placeOfForwardSlash = this.$route.path.substring(1, this.$route.path.length).indexOf('/')
+    formatRoute() {
+      const placeOfForwardSlash = this.$route.path.substring(1, this.$route.path.length).indexOf("/");
 
       if (placeOfForwardSlash !== -1) {
-        return this.$route.path.substring(1, placeOfForwardSlash + 1)
+        return this.$route.path.substring(1, placeOfForwardSlash + 1);
       } else {
-        return this.$route.path.substring(1, this.$route.path.length)
+        return this.$route.path.substring(1, this.$route.path.length);
       }
     }
   }
-}
+};
 </script>
 
 <style>

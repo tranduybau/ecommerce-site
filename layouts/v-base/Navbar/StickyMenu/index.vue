@@ -11,74 +11,74 @@
 </template>
 
 <script>
-import MenuWrap from '../MenuWrap'
+import MenuWrap from "../MenuWrap";
 export default {
-  name: 'StickyMenu',
+  name: "StickyMenu",
   components: {
     MenuWrap
   },
-  data () {
+  data() {
     return {
       menuList: [
         {
-          title: 'home',
-          linkTo: '/',
+          title: "home",
+          linkTo: "/",
           hasChildren: true,
           childrenList: [
             {
-              title: 'Menu One',
-              linkTo: '/',
+              title: "Menu One",
+              linkTo: "/",
               hasChildren: false
             },
             {
-              title: 'Menu Two',
-              linkTo: '/',
+              title: "Menu Two",
+              linkTo: "/",
               hasChildren: false
             },
             {
-              title: 'Menu Three',
-              linkTo: '/',
+              title: "Menu Three",
+              linkTo: "/",
               hasChildren: false
             },
             {
-              title: 'Sub Menu',
-              linkTo: '/',
+              title: "Sub Menu",
+              linkTo: "/",
               hasChildren: true,
               childrenList: [
                 {
-                  title: 'Menu One',
-                  linkTo: '/',
+                  title: "Menu One",
+                  linkTo: "/",
                   hasChildren: false
                 },
                 {
-                  title: 'Menu Two',
-                  linkTo: '/',
+                  title: "Menu Two",
+                  linkTo: "/",
                   hasChildren: false
                 },
                 {
-                  title: 'Menu Three',
-                  linkTo: '/',
+                  title: "Menu Three",
+                  linkTo: "/",
                   hasChildren: false
                 },
                 {
-                  title: 'Sub Menu',
-                  linkTo: '/',
+                  title: "Sub Menu",
+                  linkTo: "/",
                   hasChildren: true,
-                  listPosition: 'left-100',
+                  listPosition: "left-100",
                   childrenList: [
                     {
-                      title: 'Menu One',
-                      linkTo: '/',
+                      title: "Menu One",
+                      linkTo: "/",
                       hasChildren: false
                     },
                     {
-                      title: 'Menu Two',
-                      linkTo: '/',
+                      title: "Menu Two",
+                      linkTo: "/",
                       hasChildren: false
                     },
                     {
-                      title: 'Menu Three',
-                      linkTo: '/',
+                      title: "Menu Three",
+                      linkTo: "/",
                       hasChildren: false
                     }
                   ]
@@ -87,44 +87,36 @@ export default {
             }
           ]
         }, {
-          title: 'about',
-          linkTo: '/about',
+          title: "about",
+          linkTo: "/about",
           hasChildren: false
         }, {
-          title: 'shop',
-          linkTo: '/shop',
+          title: "shop",
+          linkTo: "/shop",
           hasChildren: false
         }, {
-          title: 'catalogue',
-          linkTo: '',
-          hasChildren: false
-        }, {
-          title: 'new arrivals',
-          linkTo: '',
-          hasChildren: false
-        }, {
-          title: 'contact',
-          linkTo: '/contact',
+          title: "contact",
+          linkTo: "/contact",
           hasChildren: false
         }
       ]
-    }
+    };
   },
-  mounted () {
-    const navbar = document.getElementById('jsStickyMenu')
-    const sticky = navbar.offsetTop
+  mounted() {
+    const navbar = document.getElementById("jsStickyMenu");
+    const sticky = navbar.offsetTop;
 
-    window.onscroll = function myFunction () {
+    window.onscroll = function myFunction() {
       if (window.pageYOffset >= sticky) {
-        navbar.classList.add('position-fixed')
-        document.getElementById('jsSiteNavbarTop').classList.add('site-navbar-top--fixed-margin-bottom')
+        navbar.classList.add("position-fixed");
+        document.getElementById("jsSiteNavbarTop").classList.add("site-navbar-top--fixed-margin-bottom");
       } else {
-        navbar.classList.remove('position-fixed')
-        document.getElementById('jsSiteNavbarTop').classList.remove('site-navbar-top--fixed-margin-bottom')
+        navbar.classList.remove("position-fixed");
+        document.getElementById("jsSiteNavbarTop").classList.remove("site-navbar-top--fixed-margin-bottom");
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

@@ -129,14 +129,14 @@
 </template>
 
 <script>
-import CategoriesBlock from '../components/CategoriesBlock'
-import FeaturesIntro from '~/components/FeaturesIntro'
+import CategoriesBlock from "../components/CategoriesBlock";
+import FeaturesIntro from "~/components/FeaturesIntro";
 
 export default {
   components: {
     CategoriesBlock,
     FeaturesIntro
   }
-}
+};
 
 </script>

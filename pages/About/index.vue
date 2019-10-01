@@ -114,12 +114,12 @@
 </template>
 
 <script>
-import FeaturesIntro from '~/components/FeaturesIntro'
+import FeaturesIntro from "~/components/FeaturesIntro";
 export default {
   components: {
     FeaturesIntro
   }
-}
+};
 </script>
 
 <style>

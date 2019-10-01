@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Navbar from './v-base/Navbar'
-import Header from './v-base/Header'
-import Footer from './v-base/Footer'
+import Navbar from "./v-base/Navbar";
+import Header from "./v-base/Header";
+import Footer from "./v-base/Footer";
 
 export default {
   components: {
@@ -18,17 +18,11 @@ export default {
     Header,
     Footer
   },
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      this.$nuxt.$loading.finish()
-    })
-  },
-  updated () {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      this.$nuxt.$loading.finish()
-    })
+      this.$nuxt.$loading.start();
+      this.$nuxt.$loading.finish(1000);
+    });
   }
-}
+};
 </script>

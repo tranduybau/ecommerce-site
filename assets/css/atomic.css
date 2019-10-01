@@ -17,3 +17,15 @@
 .transition-normal {
   transition: 0.3s all ease-in;
 }
+
+.img-cover {
+  object-fit: cover
+}
+
+.img-contain {
+  object-fit: contain
+}
+
+.opacity-0 {
+  opacity: 0
+}

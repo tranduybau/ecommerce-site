@@ -13,25 +13,25 @@
 
 <script>
 export default {
-  name: 'MenuWrap',
+  name: "MenuWrap",
   components: {
   },
   props: {
     data: {
       type: Object,
-      default () {
+      default() {
         return {
-          title: '',
-          linkTo: '',
+          title: "",
+          linkTo: "",
           hasChildren: false,
           childrenList: []
-        }
+        };
       }
     }
   },
-  mounted  () {
+  mounted() {
   }
-}
+};
 </script>
 
 <style>

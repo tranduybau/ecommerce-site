@@ -55,12 +55,12 @@
 </template>
 
 <script>
-import StickyMenu from './StickyMenu'
+import StickyMenu from "./StickyMenu";
 export default {
   components: {
     StickyMenu
   }
-}
+};
 </script>
 
 <style>
