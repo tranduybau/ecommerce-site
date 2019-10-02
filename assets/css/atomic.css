@@ -10,8 +10,44 @@
   left: 0;
 }
 
+.left-50 {
+  left: 50%;
+}
+
 .left-100 {
   left: 100%;
+}
+
+.right-50 {
+  right: 50%;
+}
+
+.z-index--100 {
+  z-index: -100;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.z-index-101 {
+  z-index: 101;
+}
+
+.z-index-1900 {
+  z-index: 1900;
+}
+
+.z-index-1901 {
+  z-index: 1901;
+}
+
+.z-index-1902 {
+  z-index: 1902;
 }
 
 .transition-normal {
@@ -28,4 +64,8 @@
 
 .opacity-0 {
   opacity: 0
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

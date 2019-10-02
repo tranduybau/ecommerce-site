@@ -22,8 +22,15 @@ export default {
     isRequireAuthen() {
       return this.$store.state.user.isRequireAuthen;
     },
+    isAuthenRoute() {
+      return 0;
+    },
   },
-  watch: {},
+  watch: {
+    isRequireAuthen(newValue, oldValue) {
+      this.$router.push("/auth/login");
+    },
+  },
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start();

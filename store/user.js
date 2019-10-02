@@ -31,6 +31,9 @@ export const actions = {
   actions_requireAuthenimmediately({ commit }) {
     commit("actions_requireAuthenimmediatelySuccessed");
   },
+  actions_closeRequireAuthenimmediately({ commit }) {
+    commit("actions_closeRequireAuthenimmediatelySuccessed");
+  },
 };
 
 export const mutations = {
@@ -63,6 +66,6 @@ export const mutations = {
     state.isRequireAuthen = true;
   },
   actions_closeRequireAuthenimmediatelySuccessed(state) {
-    state.isRequireAuthen = true;
+    state.isRequireAuthen = false;
   },
 };

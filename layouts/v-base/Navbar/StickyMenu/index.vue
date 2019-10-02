@@ -22,63 +22,63 @@ export default {
       menuList: [
         {
           title: "home",
-          linkTo: "/",
+          linkTo: "",
           hasChildren: true,
           childrenList: [
             {
               title: "Menu One",
-              linkTo: "/",
+              linkTo: "",
               hasChildren: false,
             },
             {
               title: "Menu Two",
-              linkTo: "/",
+              linkTo: "",
               hasChildren: false,
             },
             {
               title: "Menu Three",
-              linkTo: "/",
+              linkTo: "",
               hasChildren: false,
             },
             {
               title: "Sub Menu",
-              linkTo: "/",
+              linkTo: "",
               hasChildren: true,
               childrenList: [
                 {
                   title: "Menu One",
-                  linkTo: "/",
+                  linkTo: "",
                   hasChildren: false,
                 },
                 {
                   title: "Menu Two",
-                  linkTo: "/",
+                  linkTo: "",
+
                   hasChildren: false,
                 },
                 {
                   title: "Menu Three",
-                  linkTo: "/",
+                  linkTo: "",
                   hasChildren: false,
                 },
                 {
                   title: "Sub Menu",
-                  linkTo: "/",
+                  linkTo: "",
                   hasChildren: true,
-                  listPosition: "left-100",
                   childrenList: [
                     {
                       title: "Menu One",
-                      linkTo: "/",
+                      linkTo: "",
                       hasChildren: false,
                     },
                     {
                       title: "Menu Two",
-                      linkTo: "/",
+                      linkTo: "",
                       hasChildren: false,
                     },
                     {
                       title: "Menu Three",
-                      linkTo: "/",
+                      linkTo: "",
                       hasChildren: false,
                     },
                   ],

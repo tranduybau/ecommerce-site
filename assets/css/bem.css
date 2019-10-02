@@ -7,3 +7,21 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
 }
+
+.home__slick-carousel .slick-initialized span {
+  padding: 20px;
+
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+
+  cursor: pointer;
+  transition: 0.3s all ease;
+
+  color: #5c626e;
+  font-size: 30px;
+}
+
+.slick-disabled {
+  opacity: 0.2;
+}

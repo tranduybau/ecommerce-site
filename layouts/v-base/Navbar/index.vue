@@ -27,7 +27,7 @@
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="#">
+                  <nuxt-link to="">
                     <span class="icon icon-heart-o" />
                   </nuxt-link>
                 </li>

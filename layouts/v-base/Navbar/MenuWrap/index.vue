@@ -25,11 +25,10 @@ export default {
           linkTo: "",
           hasChildren: false,
           childrenList: [],
+          noPrefetch: false,
         };
       },
     },
-  },
-  mounted() {
   },
 };
 </script>

@@ -39,7 +39,7 @@ export default {
     "@/assets/css/atomic.css",
     "@/assets/css/bem.css",
   ],
-  plugins: [],
+  plugins: [{ src: "~/plugins/index.js", ssr: false }],
   buildModules: ["@nuxtjs/eslint-module"],
   modules: ["nuxt-fire"],
   build: {
@@ -48,7 +48,6 @@ export default {
   server: {
     port: 3333,
   },
-
   fire: {
     useOnly: [
       "auth",
