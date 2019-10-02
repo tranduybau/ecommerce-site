@@ -18,6 +18,12 @@ export default {
     Header,
     Footer,
   },
+  computed: {
+    isRequireAuthen() {
+      return this.$store.state.user.isRequireAuthen;
+    },
+  },
+  watch: {},
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start();
