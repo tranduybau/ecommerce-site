@@ -11,13 +11,17 @@ export const state = () => ({
 });
 
 export const actions = {
-  async action_checkUser({ commit }) {
+  async action_checkUser({ commit }, userInfo) {
     try {
-      const userResponse = await fetch("");
-      const dataUser = await userResponse.json();
-      const userExisted = { ...dataUser };
+      const { email, password } = userInfo;
+      const haha = await this.$fireAuth.signInWithEmailAndPassword(email, password);
+      console.log(haha);
 
-      commit("action_checkUserSuccessed", userExisted);
+      // const userResponse = await fetch("");
+      // const dataUser = await userResponse.json();
+      // const userExisted = { ...dataUser };
+
+      // commit("action_checkUserSuccessed", userExisted);
     } catch (error) {
       commit("action_checkUserFailed", error);
     }
@@ -32,7 +36,6 @@ export const actions = {
     commit("actions_requireAuthenImmediatelySuccessed");
   },
   actions_closerequireAuthenImmediately({ commit }) {
-    this.$fireAuth.signInWithEmailAndPassword("trdbau@gmail.com", "bao123");
     commit("actions_closerequireAuthenImmediatelySuccessed");
   },
 };

@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-md-6 col-sm-8 offset-xl-7 offset-md-6 offset-sm-2">
-          <form action="" method="post">
+          <form @submit.prevent="handleSubmit">
             <div class="p-3 p-lg-5 border bg-white">
               <div class="text-center site-navbar mb-4">
                 <div class="site-logo">
@@ -23,10 +23,7 @@
                     <span class="text-danger">*</span>
                   </label>
                   <input
-                    id="c_email"
-                    type="email"
-                    name="c_email"
-                    placeholder=""
+                    v-model="emailUser"
                     class="form-control"
                   >
                 </div>
@@ -38,9 +35,8 @@
                     <span class="text-danger">*</span>
                   </label>
                   <input
-                    id="c_subject"
-                    type="text"
-                    name="c_subject"
+                    v-model="passwordUser"
+                    type="password"
                     class="form-control"
                   >
                 </div>
@@ -67,7 +63,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      emailUser: "",
+      passwordUser: "",
+    };
+  },
+  methods: {
+    handleSubmit() {
+      this.$store.dispatch("user/action_checkUser", { email: this.emailUser, password: this.passwordUser });
+    },
+  },
+};
 </script>
 
 <style>
