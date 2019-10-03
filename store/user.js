@@ -14,14 +14,11 @@ export const actions = {
   async action_checkUser({ commit }, userInfo) {
     try {
       const { email, password } = userInfo;
-      const haha = await this.$fireAuth.signInWithEmailAndPassword(email, password);
-      console.log(haha);
+      const userResponse = await this.$fireAuth.signInWithEmailAndPassword(email, password);
+      console.log(userResponse);
 
-      // const userResponse = await fetch("");
-      // const dataUser = await userResponse.json();
-      // const userExisted = { ...dataUser };
-
-      // commit("action_checkUserSuccessed", userExisted);
+      commit("actions_closerequireAuthenImmediatelySuccessed");
+      commit("action_checkUserSuccessed", userResponse);
     } catch (error) {
       commit("action_checkUserFailed", error);
     }
