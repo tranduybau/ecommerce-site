@@ -31,14 +31,15 @@ export default {
   },
   watch: {
     $route(to, from) {
-      // this.isAuthenRoute = to.path.includes("auth");
-      console.log(this.isAuthenRoute);
+      if (!to.path.includes("auth") && from.path.includes("auth")) {
+        this.$store.dispatch("user/actions_closerequireAuthenImmediately");
+      }
     },
     isRequireAuthen(to, from) {
       if (to) {
         this.$router.push("/auth/login");
       } else {
-        this.$store.dispatch("user/actions_requireAuthenimmediately");
+        this.$store.dispatch("user/actions_requireAuthenImmediately");
         this.$router.push("/");
       }
     },

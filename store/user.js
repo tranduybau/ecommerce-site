@@ -28,11 +28,12 @@ export const actions = {
   action_closeLoginBox({ commit }) {
     commit("action_closeLoginBoxSuccessed");
   },
-  actions_requireAuthenimmediately({ commit }) {
-    commit("actions_requireAuthenimmediatelySuccessed");
+  actions_requireAuthenImmediately({ commit }) {
+    commit("actions_requireAuthenImmediatelySuccessed");
   },
-  actions_closeRequireAuthenimmediately({ commit }) {
-    commit("actions_closeRequireAuthenimmediatelySuccessed");
+  actions_closerequireAuthenImmediately({ commit }) {
+    this.$fireAuth.signInWithEmailAndPassword("trdbau@gmail.com", "bao123");
+    commit("actions_closerequireAuthenImmediatelySuccessed");
   },
 };
 
@@ -62,10 +63,10 @@ export const mutations = {
   action_closeLoginBoxSuccessed(state) {
     state.isOpenLoginBox = false;
   },
-  actions_requireAuthenimmediatelySuccessed(state) {
+  actions_requireAuthenImmediatelySuccessed(state) {
     state.isRequireAuthen = true;
   },
-  actions_closeRequireAuthenimmediatelySuccessed(state) {
+  actions_closerequireAuthenImmediatelySuccessed(state) {
     state.isRequireAuthen = false;
   },
 };

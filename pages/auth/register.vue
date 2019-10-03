@@ -68,6 +68,10 @@
                   >
                 </div>
               </div>
+              <hr>
+              <span>
+                Or you can <nuxt-link to="/auth/login" class="text-capitalize">Login Now!</nuxt-link>
+              </span>
             </div>
           </form>
         </div>

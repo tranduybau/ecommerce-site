@@ -33,8 +33,8 @@
                     <nuxt-link to="/auth/register" class="dropdown-item">
                       Register
                     </nuxt-link>
-                    <nuxt-link to="" class="dropdown-item">
-                      This Feature is on building!
+                    <nuxt-link to="" class="dropdown-item cursor-pointer">
+                      New feature is coming
                     </nuxt-link>
                   </div>
                 </li>
@@ -71,6 +71,8 @@ import StickyMenu from "./StickyMenu";
 export default {
   components: {
     StickyMenu,
+  },
+  methods: {
   },
 };
 </script>
