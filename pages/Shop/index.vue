@@ -23,13 +23,13 @@
                     Latest
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Men
                     </nuxt-link>
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Women
                     </nuxt-link>
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Children
                     </nuxt-link>
                   </div>
@@ -39,20 +39,20 @@
                     Reference
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Relevance
                     </nuxt-link>
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Name, A to Z
                     </nuxt-link>
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Name, Z to A
                     </nuxt-link>
                     <div class="dropdown-divider" />
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Price, low to high
                     </nuxt-link>
-                    <nuxt-link to="/" class="dropdown-item" href="#">
+                    <nuxt-link to="/" class="dropdown-item">
                       Price, high to low
                     </nuxt-link>
                   </div>
@@ -331,7 +331,7 @@
               <div class="site-block-27">
                 <ul>
                   <li>
-                    <nuxt-link to="#">
+                    <nuxt-link to="">
                       &lt;
                     </nuxt-link>
                   </li>
@@ -339,27 +339,27 @@
                     <span>1</span>
                   </li>
                   <li>
-                    <nuxt-link to="#">
+                    <nuxt-link to="">
                       2
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="#">
+                    <nuxt-link to="">
                       3
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="#">
+                    <nuxt-link to="">
                       4
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="#">
+                    <nuxt-link to="">
                       5
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="#">
+                    <nuxt-link to="">
                       &gt;
                     </nuxt-link>
                   </li>
@@ -375,17 +375,17 @@
             </h3>
             <ul class="list-unstyled mb-0">
               <li class="mb-1">
-                <nuxt-link to="#" class="d-flex">
+                <nuxt-link to="" class="d-flex">
                   <span>Men</span> <span class="text-black ml-auto">(2,220)</span>
                 </nuxt-link>
               </li>
               <li class="mb-1">
-                <nuxt-link to="#" class="d-flex">
+                <nuxt-link to="" class="d-flex">
                   <span>Women</span> <span class="text-black ml-auto">(2,550)</span>
                 </nuxt-link>
               </li>
               <li class="mb-1">
-                <nuxt-link to="#" class="d-flex">
+                <nuxt-link to="" class="d-flex">
                   <span>Children</span> <span class="text-black ml-auto">(2,124)</span>
                 </nuxt-link>
               </li>
@@ -419,16 +419,16 @@
               <h3 class="mb-3 h6 text-uppercase text-black d-block">
                 Color
               </h3>
-              <nuxt-link to="#" class="d-flex color-item align-items-center">
+              <nuxt-link to="" class="d-flex color-item align-items-center">
                 <span class="bg-danger color d-inline-block rounded-circle mr-2" /> <span class="text-black">Red (2,429)</span>
               </nuxt-link>
-              <nuxt-link to="#" class="d-flex color-item align-items-center">
+              <nuxt-link to="" class="d-flex color-item align-items-center">
                 <span class="bg-success color d-inline-block rounded-circle mr-2" /> <span class="text-black">Green (2,298)</span>
               </nuxt-link>
-              <nuxt-link to="#" class="d-flex color-item align-items-center">
+              <nuxt-link to="" class="d-flex color-item align-items-center">
                 <span class="bg-info color d-inline-block rounded-circle mr-2" /> <span class="text-black">Blue (1,075)</span>
               </nuxt-link>
-              <nuxt-link to="#" class="d-flex color-item align-items-center">
+              <nuxt-link to="" class="d-flex color-item align-items-center">
                 <span class="bg-primary color d-inline-block rounded-circle mr-2" /> <span class="text-black">Purple (1,075)</span>
               </nuxt-link>
             </div>

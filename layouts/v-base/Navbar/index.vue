@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
-            <form action="" class="site-block-top-search" @submit.prevent="$router.push('/')">
+            <form action="" class="site-block-top-search" @submit.prevent="$router.push('/auth/login')">
               <span class="icon icon-search2" />
               <input type="text" class="form-control border-0" placeholder="Search">
             </form>
@@ -21,10 +21,22 @@
           <div class="col-6 col-md-4 order-3 order-md-3 text-right">
             <div class="site-top-icons">
               <ul>
-                <li>
-                  <nuxt-link to="#">
+                <li class="dropdown">
+                  <nuxt-link id="dropdownMenuLink" class="dropdown-toggle" to="" data-toggle="dropdown">
                     <span class="icon icon-person" />
                   </nuxt-link>
+
+                  <div class="dropdown-menu right-0 mr-n3" aria-labelledby="dropdownMenuLink">
+                    <nuxt-link to="/auth/login" class="dropdown-item">
+                      Login
+                    </nuxt-link>
+                    <nuxt-link to="/auth/register" class="dropdown-item">
+                      Register
+                    </nuxt-link>
+                    <nuxt-link to="" class="dropdown-item">
+                      This Feature is on building!
+                    </nuxt-link>
+                  </div>
                 </li>
                 <li>
                   <nuxt-link to="">
@@ -38,7 +50,7 @@
                   </nuxt-link>
                 </li>
                 <li class="d-inline-block d-md-none ml-md-0">
-                  <nuxt-link to="#" class="site-menu-toggle js-menu-toggle">
+                  <nuxt-link to="" class="site-menu-toggle js-menu-toggle">
                     <span
                       class="icon-menu"
                     />
@@ -64,5 +76,7 @@ export default {
 </script>
 
 <style>
-
+.dropdown-toggle:after {
+  display: none;
+}
 </style>

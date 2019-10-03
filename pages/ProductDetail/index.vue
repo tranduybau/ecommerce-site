@@ -80,7 +80,7 @@
                         </figure>
                         <div class="block-4-text p-4">
                           <h3>
-                            <nuxt-link to="#">
+                            <nuxt-link to="">
                               Tank Top
                             </nuxt-link>
                           </h3>
@@ -101,7 +101,7 @@
                         </figure>
                         <div class="block-4-text p-4">
                           <h3>
-                            <nuxt-link to="#">
+                            <nuxt-link to="">
                               Corater
                             </nuxt-link>
                           </h3>
@@ -122,7 +122,7 @@
                         </figure>
                         <div class="block-4-text p-4">
                           <h3>
-                            <nuxt-link to="#">
+                            <nuxt-link to="">
                               Polo Shirt
                             </nuxt-link>
                           </h3>
@@ -143,7 +143,7 @@
                         </figure>
                         <div class="block-4-text p-4">
                           <h3>
-                            <nuxt-link to="#">
+                            <nuxt-link to="">
                               T-Shirt Mockup
                             </nuxt-link>
                           </h3>
@@ -164,7 +164,7 @@
                         </figure>
                         <div class="block-4-text p-4">
                           <h3>
-                            <nuxt-link to="#">
+                            <nuxt-link to="">
                               Corater
                             </nuxt-link>
                           </h3>

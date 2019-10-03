@@ -12,7 +12,7 @@
               Integer accumsan tincidunt fringilla.
             </p>
             <p>
-              <nuxt-link to="#" class="btn btn-sm btn-primary">
+              <nuxt-link to="" class="btn btn-sm btn-primary">
                 Shop Now
               </nuxt-link>
             </p>

@@ -7,9 +7,9 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-md-6 col-sm-8 offset-xl-7 offset-md-6 offset-sm-2">
-          <form action="#" method="post">
+          <form action="" method="post">
             <div class="p-3 p-lg-5 border bg-white">
-              <div class="text-center site-navbar mb-5">
+              <div class="text-center site-navbar mb-4">
                 <div class="site-logo">
                   <a href="/" class="js-logo-clone nuxt-link-active">
                     Shoppers
@@ -46,10 +46,24 @@
                 </div>
               </div>
               <div class="form-group row">
+                <div class="col-md-12">
+                  <label for="c_subject" class="text-black">
+                    Re-Password
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    id="c_subject"
+                    type="text"
+                    name="c_subject"
+                    class="form-control"
+                  >
+                </div>
+              </div>
+              <div class="form-group row">
                 <div class="col-lg-12">
                   <input
                     type="submit"
-                    value="Send Message"
+                    value="Sign In"
                     class="btn btn-primary btn-lg btn-block"
                   >
                 </div>

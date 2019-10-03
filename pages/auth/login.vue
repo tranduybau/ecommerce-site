@@ -7,13 +7,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-md-6 col-sm-8 offset-xl-7 offset-md-6 offset-sm-2">
-          <form action="#" method="post">
+          <form action="" method="post">
             <div class="p-3 p-lg-5 border bg-white">
-              <div class="text-center site-navbar mb-5">
+              <div class="text-center site-navbar mb-4">
                 <div class="site-logo">
-                  <a href="/" class="js-logo-clone nuxt-link-active">
+                  <nuxt-link to="/" class="js-logo-clone nuxt-link-active">
                     Shoppers
-                  </a>
+                  </nuxt-link>
                 </div>
               </div>
               <div class="form-group row">
@@ -49,11 +49,15 @@
                 <div class="col-lg-12">
                   <input
                     type="submit"
-                    value="Send Message"
+                    value="LOGIN NOW"
                     class="btn btn-primary btn-lg btn-block"
                   >
                 </div>
               </div>
+              <hr>
+              <span>
+                Or you can <nuxt-link to="/auth/register" class="text-capitalize">Register Now!</nuxt-link>
+              </span>
             </div>
           </form>
         </div>
@@ -63,9 +67,7 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style>

@@ -8,7 +8,7 @@
           </h2>
         </div>
         <div class="col-md-7">
-          <form action="#" method="post">
+          <form action="" method="post">
             <div class="p-3 p-lg-5 border">
               <div class="form-group row">
                 <div class="col-md-6">

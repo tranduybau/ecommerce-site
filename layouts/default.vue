@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div v-if="isAuthenRoute || isRequireAuthen">
+    <nuxt />
+  </div>
+  <div v-else>
     <Navbar />
     <Header />
     <nuxt />
@@ -23,12 +26,21 @@ export default {
       return this.$store.state.user.isRequireAuthen;
     },
     isAuthenRoute() {
-      return 0;
+      return this.$route.path.includes("auth");
     },
   },
   watch: {
-    isRequireAuthen(newValue, oldValue) {
-      this.$router.push("/auth/login");
+    $route(to, from) {
+      // this.isAuthenRoute = to.path.includes("auth");
+      console.log(this.isAuthenRoute);
+    },
+    isRequireAuthen(to, from) {
+      if (to) {
+        this.$router.push("/auth/login");
+      } else {
+        this.$store.dispatch("user/actions_requireAuthenimmediately");
+        this.$router.push("/");
+      }
     },
   },
   mounted() {

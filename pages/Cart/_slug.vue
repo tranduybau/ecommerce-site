@@ -62,7 +62,7 @@
                   </td>
                   <td>$49.00</td>
                   <td>
-                    <nuxt-link to="#" class="btn btn-primary btn-sm">
+                    <nuxt-link to="" class="btn btn-primary btn-sm">
                       X
                     </nuxt-link>
                   </td>
@@ -102,7 +102,7 @@
                   </td>
                   <td>$49.00</td>
                   <td>
-                    <nuxt-link to="#" class="btn btn-primary btn-sm">
+                    <nuxt-link to="" class="btn btn-primary btn-sm">
                       X
                     </nuxt-link>
                   </td>
