@@ -1,36 +1,26 @@
 export const state = () => ({
   isLogined: false,
-  isOpenLoginBox: false,
   isRequireAuthen: false,
   userInfo: {},
   response: {
     isFailed: false,
-    messenge: "",
+    message: "",
     type: "",
   },
 });
 
 export const actions = {
   async action_checkUser({ commit }, userInfo) {
+    commit("action_checkUserPending");
+
     try {
       const { email, password } = userInfo;
-      const haha = await this.$fireAuth.signInWithEmailAndPassword(email, password);
-      console.log(haha);
+      await this.$fireAuth.signInWithEmailAndPassword(email, password);
 
-      // const userResponse = await fetch("");
-      // const dataUser = await userResponse.json();
-      // const userExisted = { ...dataUser };
-
-      // commit("action_checkUserSuccessed", userExisted);
+      commit("action_checkUserSuccessed", this.$fireAuth.currentUser);
     } catch (error) {
-      commit("action_checkUserFailed", error);
+      commit("action_checkUserFailed");
     }
-  },
-  action_openLoginBox({ commit }) {
-    commit("action_openLoginBoxSuccessed");
-  },
-  action_closeLoginBox({ commit }) {
-    commit("action_closeLoginBoxSuccessed");
   },
   actions_requireAuthenImmediately({ commit }) {
     commit("actions_requireAuthenImmediatelySuccessed");
@@ -41,30 +31,35 @@ export const actions = {
 };
 
 export const mutations = {
+  action_checkUserPending(state) {
+    state = {
+      isLogined: false,
+      userInfo: {},
+      response: {
+        isFailed: false,
+        message: "",
+        type: "",
+      },
+    };
+  },
   action_checkUserSuccessed(state, userExisted) {
     state = {
       response: {
-        messenge: "Login successed",
+        message: "Login successed",
         type: "success",
       },
       isLogined: true,
       userInfo: userExisted,
     };
   },
-  action_checkUserFailed(state, error) {
-    state = {
-      response: {
-        type: "danger",
-        messenge: error,
-        isFailed: true,
-      },
+  action_checkUserFailed(state) {
+    state.response = {
+      type: "danger",
+      message: "Wrong email or password",
+      isFailed: true,
     };
-  },
-  action_openLoginBoxSuccessed(state) {
-    state.isOpenLoginBox = true;
-  },
-  action_closeLoginBoxSuccessed(state) {
-    state.isOpenLoginBox = false;
+
+    state.isLogined = false;
   },
   actions_requireAuthenImmediatelySuccessed(state) {
     state.isRequireAuthen = true;

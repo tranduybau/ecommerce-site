@@ -16,6 +16,9 @@
                   </nuxt-link>
                 </div>
               </div>
+              <div v-if="loginResponse.isFailed" class="alert alert-danger" role="alert">
+                {{ loginResponse.message }}
+              </div>
               <div class="form-group row">
                 <div class="col-md-12">
                   <label for="c_email" class="text-black">
@@ -70,9 +73,29 @@ export default {
       passwordUser: "",
     };
   },
+  computed: {
+    isLoginFailed() {
+      return this.$store.state.user.response.isFailed;
+    },
+    loginResponse() {
+      return this.$store.state.user.response;
+    },
+  },
+  watch: {
+    loginResponse(to, from) {
+      if (to.isFailed) {
+        setTimeout(() => {
+          this.$nuxt.$loading.finish();
+        }, 500);
+      }
+    },
+  },
   methods: {
     handleSubmit() {
-      this.$store.dispatch("user/action_checkUser", { email: this.emailUser, password: this.passwordUser });
+      if (this.passwordUser && this.emailUser) {
+        this.$nuxt.$loading.start();
+        this.$store.dispatch("user/action_checkUser", { email: this.emailUser, password: this.passwordUser });
+      }
     },
   },
 };

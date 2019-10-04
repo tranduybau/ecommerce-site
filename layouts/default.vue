@@ -31,6 +31,13 @@ export default {
   },
   watch: {
     $route(to, from) {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start();
+        setTimeout(() => {
+          this.$nuxt.$loading.finish();
+        }, 1000);
+      });
+
       if (!to.path.includes("auth") && from.path.includes("auth")) {
         this.$store.dispatch("user/actions_closerequireAuthenImmediately");
       }
@@ -47,7 +54,9 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start();
-      this.$nuxt.$loading.finish(1000);
+      setTimeout(() => {
+        this.$nuxt.$loading.finish();
+      }, 1000);
     });
   },
 };
