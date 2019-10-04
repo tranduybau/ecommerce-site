@@ -66,6 +66,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -73,20 +75,18 @@ export default {
       passwordUser: "",
     };
   },
-  computed: {
-    isLoginFailed() {
-      return this.$store.state.user.response.isFailed;
-    },
-    loginResponse() {
-      return this.$store.state.user.response;
-    },
-  },
+  computed: mapState({
+    isLoginFailed: state => state.user.response.isFailed,
+    loginResponse: state => state.user.response,
+  }),
   watch: {
     loginResponse(to, from) {
       if (to.isFailed) {
         setTimeout(() => {
           this.$nuxt.$loading.finish();
         }, 500);
+      } else if (this.$store.state.user.isLogined) {
+        this.$router.push("/");
       }
     },
   },

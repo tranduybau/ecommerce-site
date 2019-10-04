@@ -21,41 +21,60 @@
           <div class="col-6 col-md-4 order-3 order-md-3 text-right">
             <div class="site-top-icons">
               <ul>
-                <li class="dropdown">
+                <li v-if="userInfo && userInfo.email" class="dropdown">
                   <nuxt-link id="dropdownMenuLink" class="dropdown-toggle" to="" data-toggle="dropdown">
                     <span class="icon icon-person" />
                   </nuxt-link>
 
                   <div class="dropdown-menu right-0 mr-n3" aria-labelledby="dropdownMenuLink">
                     <nuxt-link to="/auth/login" class="dropdown-item">
-                      Login
+                      Wishlist
                     </nuxt-link>
                     <nuxt-link to="/auth/register" class="dropdown-item">
-                      Register
+                      Checkout
                     </nuxt-link>
                     <nuxt-link to="" class="dropdown-item cursor-pointer">
-                      New feature is coming
+                      Logout
                     </nuxt-link>
                   </div>
                 </li>
-                <li>
-                  <nuxt-link to="">
-                    <span class="icon icon-heart-o" />
-                  </nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link to="/cart" class="site-cart">
-                    <span class="icon icon-shopping_cart" />
-                    <span class="count">2</span>
-                  </nuxt-link>
-                </li>
-                <li class="d-inline-block d-md-none ml-md-0">
-                  <nuxt-link to="" class="site-menu-toggle js-menu-toggle">
-                    <span
-                      class="icon-menu"
-                    />
-                  </nuxt-link>
-                </li>
+                <template v-else>
+                  <li class="dropdown">
+                    <nuxt-link id="dropdownMenuLink" class="dropdown-toggle" to="" data-toggle="dropdown">
+                      <span class="icon icon-person" />
+                    </nuxt-link>
+
+                    <div class="dropdown-menu right-0 mr-n3" aria-labelledby="dropdownMenuLink">
+                      <nuxt-link to="/auth/login" class="dropdown-item">
+                        Login
+                      </nuxt-link>
+                      <nuxt-link to="/auth/register" class="dropdown-item">
+                        Register
+                      </nuxt-link>
+                      <nuxt-link to="" class="dropdown-item cursor-pointer">
+                        New feature is coming
+                      </nuxt-link>
+                    </div>
+                  </li>
+                  <li>
+                    <nuxt-link to="">
+                      <span class="icon icon-heart-o" />
+                    </nuxt-link>
+                  </li>
+                  <li>
+                    <nuxt-link to="/cart" class="site-cart">
+                      <span class="icon icon-shopping_cart" />
+                      <span class="count">2</span>
+                    </nuxt-link>
+                  </li>
+                  <li class="d-inline-block d-md-none ml-md-0">
+                    <nuxt-link to="" class="site-menu-toggle js-menu-toggle">
+                      <span
+                        class="icon-menu"
+                      />
+                    </nuxt-link>
+                  </li>
+                </template>
               </ul>
             </div>
           </div>
@@ -67,11 +86,16 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 import StickyMenu from "./StickyMenu";
 export default {
   components: {
     StickyMenu,
   },
+  computed: mapState({
+    userInfo: state => state.user.userInfo,
+  }),
   methods: {
   },
 };
@@ -80,5 +104,8 @@ export default {
 <style>
 .dropdown-toggle:after {
   display: none;
+}
+.dropdown-item {
+  padding-left: 12px;
 }
 </style>

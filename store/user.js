@@ -43,14 +43,13 @@ export const mutations = {
     };
   },
   action_checkUserSuccessed(state, userExisted) {
-    state = {
-      response: {
-        message: "Login successed",
-        type: "success",
-      },
-      isLogined: true,
-      userInfo: userExisted,
+    state.response = {
+      message: "Login successed",
+      isFailed: false,
+      type: "success",
     };
+    state.isLogined = true;
+    state.userInfo = userExisted;
   },
   action_checkUserFailed(state) {
     state.response = {
