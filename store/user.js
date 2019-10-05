@@ -17,29 +17,31 @@ export const actions = {
       const { email, password } = userInfo;
       await this.$fireAuth.signInWithEmailAndPassword(email, password);
 
+      commit("action_closerequireAuthenImmediatelySuccessed");
       commit("action_checkUserSuccessed", this.$fireAuth.currentUser);
     } catch (error) {
       commit("action_checkUserFailed");
     }
   },
-  actions_requireAuthenImmediately({ commit }) {
-    commit("actions_requireAuthenImmediatelySuccessed");
+  action_requireAuthenImmediately({ commit }) {
+    commit("action_requireAuthenImmediatelySuccessed");
   },
-  actions_closerequireAuthenImmediately({ commit }) {
-    commit("actions_closerequireAuthenImmediatelySuccessed");
+  action_closerequireAuthenImmediately({ commit }) {
+    commit("action_closerequireAuthenImmediatelySuccessed");
+  },
+  action_logout({ commit }) {
+    commit("action_logout");
   },
 };
 
 export const mutations = {
   action_checkUserPending(state) {
-    state = {
-      isLogined: false,
-      userInfo: {},
-      response: {
-        isFailed: false,
-        message: "",
-        type: "",
-      },
+    state.isLogined = false;
+    state.userInfo = {};
+    state.response = {
+      isFailed: false,
+      message: "",
+      type: "",
     };
   },
   action_checkUserSuccessed(state, userExisted) {
@@ -50,6 +52,7 @@ export const mutations = {
     };
     state.isLogined = true;
     state.userInfo = userExisted;
+    state.isRequireAuthen = false;
   },
   action_checkUserFailed(state) {
     state.response = {
@@ -60,10 +63,20 @@ export const mutations = {
 
     state.isLogined = false;
   },
-  actions_requireAuthenImmediatelySuccessed(state) {
+  action_requireAuthenImmediatelySuccessed(state) {
     state.isRequireAuthen = true;
   },
-  actions_closerequireAuthenImmediatelySuccessed(state) {
+  action_closerequireAuthenImmediatelySuccessed(state) {
     state.isRequireAuthen = false;
+  },
+  action_logout(state) {
+    state.isLogined = false;
+    state.isRequireAuthen = true;
+    state.userInfo = {};
+    state.response = {
+      isFailed: false,
+      message: "",
+      type: "",
+    };
   },
 };

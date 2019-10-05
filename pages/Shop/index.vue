@@ -64,13 +64,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init aos-animate">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Tank Top
                     </nuxt-link>
                   </h3>
@@ -86,13 +86,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init aos-animate">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Corater
                     </nuxt-link>
                   </h3>
@@ -108,13 +108,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init aos-animate">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_2.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Polo Shirt
                     </nuxt-link>
                   </h3>
@@ -130,13 +130,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_3.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       T-Shirt Mockup
                     </nuxt-link>
                   </h3>
@@ -152,13 +152,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Corater
                     </nuxt-link>
                   </h3>
@@ -174,13 +174,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Tank Top
                     </nuxt-link>
                   </h3>
@@ -196,13 +196,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Corater
                     </nuxt-link>
                   </h3>
@@ -218,13 +218,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_2.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Polo Shirt
                     </nuxt-link>
                   </h3>
@@ -240,13 +240,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_3.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       T-Shirt Mockup
                     </nuxt-link>
                   </h3>
@@ -262,13 +262,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Corater
                     </nuxt-link>
                   </h3>
@@ -284,13 +284,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_1.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Tank Top
                     </nuxt-link>
                   </h3>
@@ -306,13 +306,13 @@
             <div class="col-sm-6 col-lg-4 mb-4 aos-init">
               <div class="block-4 text-center border">
                 <figure class="block-4-image">
-                  <nuxt-link to="/productdetail">
+                  <nuxt-link to="/product-detail">
                     <img src="/images/cloth_2.jpg" alt="Image placeholder" class="img-fluid">
                   </nuxt-link>
                 </figure>
                 <div class="block-4-text p-4">
                   <h3>
-                    <nuxt-link to="/productdetail">
+                    <nuxt-link to="/product-detail">
                       Polo Shirt
                     </nuxt-link>
                   </h3>

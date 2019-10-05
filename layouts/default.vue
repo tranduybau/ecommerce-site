@@ -37,17 +37,10 @@ export default {
           this.$nuxt.$loading.finish();
         }, 1000);
       });
-
-      if (!to.path.includes("auth") && from.path.includes("auth")) {
-        this.$store.dispatch("user/actions_closerequireAuthenImmediately");
-      }
     },
     isRequireAuthen(to, from) {
       if (to) {
         this.$router.push("/auth/login");
-      } else {
-        this.$store.dispatch("user/actions_requireAuthenImmediately");
-        this.$router.push("/");
       }
     },
   },

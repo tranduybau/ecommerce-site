@@ -78,6 +78,7 @@ export default {
   computed: mapState({
     isLoginFailed: state => state.user.response.isFailed,
     loginResponse: state => state.user.response,
+    isLogined: state => state.user.isLogined,
   }),
   watch: {
     loginResponse(to, from) {
@@ -85,10 +86,13 @@ export default {
         setTimeout(() => {
           this.$nuxt.$loading.finish();
         }, 500);
-      } else if (this.$store.state.user.isLogined) {
+      } else if (this.isLogined) {
         this.$router.push("/");
       }
     },
+  },
+  created() {
+    if (this.isLogined) this.$router.push("/");
   },
   methods: {
     handleSubmit() {
