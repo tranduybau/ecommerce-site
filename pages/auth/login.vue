@@ -16,6 +16,9 @@
                   </nuxt-link>
                 </div>
               </div>
+              <div v-if="loginResponse.isFailed" class="alert alert-danger" role="alert">
+                {{ loginResponse.message }}
+              </div>
               <div class="form-group row">
                 <div class="col-md-12">
                   <label for="c_email" class="text-black">
@@ -63,6 +66,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -70,9 +75,27 @@ export default {
       passwordUser: "",
     };
   },
+  computed: mapState({
+    isLoginFailed: state => state.user.response.isFailed,
+    loginResponse: state => state.user.response,
+  }),
+  watch: {
+    loginResponse(to, from) {
+      if (to.isFailed) {
+        setTimeout(() => {
+          this.$nuxt.$loading.finish();
+        }, 500);
+      } else if (this.$store.state.user.isLogined) {
+        this.$router.push("/");
+      }
+    },
+  },
   methods: {
     handleSubmit() {
-      this.$store.dispatch("user/action_checkUser", { email: this.emailUser, password: this.passwordUser });
+      if (this.passwordUser && this.emailUser) {
+        this.$nuxt.$loading.start();
+        this.$store.dispatch("user/action_checkUser", { email: this.emailUser, password: this.passwordUser });
+      }
     },
   },
 };

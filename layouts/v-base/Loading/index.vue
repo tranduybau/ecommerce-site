@@ -28,10 +28,8 @@ export default {
     start() {
       this.loading = true;
     },
-    finish(countdown = 1000) {
-      setTimeout(() => {
-        this.loading = false;
-      }, countdown);
+    finish() {
+      this.loading = false;
     },
   },
 };

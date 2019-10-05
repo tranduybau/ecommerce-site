@@ -1,7 +1,7 @@
 export const state = () => ({
   response: {
     isFailed: false,
-    messenge: "",
+    message: "",
     type: "",
   },
   isGotten: false,
