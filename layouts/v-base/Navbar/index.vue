@@ -21,23 +21,30 @@
           <div class="col-6 col-md-4 order-3 order-md-3 text-right">
             <div class="site-top-icons">
               <ul>
-                <li v-if="userInfo && userInfo.email" class="dropdown">
-                  <nuxt-link id="dropdownMenuLink" class="dropdown-toggle" to="" data-toggle="dropdown">
-                    <span class="icon icon-person" />
-                  </nuxt-link>
+                <template v-if="userInfo && userInfo.email">
+                  <li class="dropdown">
+                    <nuxt-link id="dropdownMenuLink" class="dropdown-toggle" to="" data-toggle="dropdown">
+                      <span class="icon icon-person" />
+                    </nuxt-link>
 
-                  <div class="dropdown-menu right-0 mr-n3" aria-labelledby="dropdownMenuLink">
-                    <nuxt-link to="/auth/login" class="dropdown-item">
-                      Wishlist
+                    <div class="dropdown-menu right-0 mr-n3" aria-labelledby="dropdownMenuLink">
+                      <nuxt-link to="/auth/login" class="dropdown-item">
+                        Wishlist
+                      </nuxt-link>
+                      <nuxt-link to="/auth/register" class="dropdown-item">
+                        Checkout
+                      </nuxt-link>
+                      <nuxt-link to="" class="dropdown-item" @click.native="logout()">
+                        Logout
+                      </nuxt-link>
+                    </div>
+                  </li>
+                  <li>
+                    <nuxt-link to="/product-manager">
+                      <span class="icon icon-list-alt" />
                     </nuxt-link>
-                    <nuxt-link to="/auth/register" class="dropdown-item">
-                      Checkout
-                    </nuxt-link>
-                    <nuxt-link to="" class="dropdown-item cursor-pointer">
-                      Logout
-                    </nuxt-link>
-                  </div>
-                </li>
+                  </li>
+                </template>
                 <template v-else>
                   <li class="dropdown">
                     <nuxt-link id="dropdownMenuLink" class="dropdown-toggle" to="" data-toggle="dropdown">
@@ -55,11 +62,6 @@
                         New feature is coming
                       </nuxt-link>
                     </div>
-                  </li>
-                  <li>
-                    <nuxt-link to="">
-                      <span class="icon icon-heart-o" />
-                    </nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/cart" class="site-cart">
@@ -97,6 +99,9 @@ export default {
     userInfo: state => state.user.userInfo,
   }),
   methods: {
+    logout() {
+      this.$store.dispatch("user/action_logout");
+    },
   },
 };
 </script>

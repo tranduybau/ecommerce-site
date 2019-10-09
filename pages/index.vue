@@ -21,7 +21,7 @@
                       </figure>
                       <div class="block-4-text p-4">
                         <h3>
-                          <nuxt-link to="/productdetail" class="text-capitalize">
+                          <nuxt-link to="/product-detail" class="text-capitalize">
                             {{ item.title }}
                           </nuxt-link>
                         </h3>

@@ -1,5 +1,5 @@
 <template>
-  <nav id="jsStickyMenu" class="site-navigation text-right text-md-center top-0 left-0 w-100 bg-white transition-normal" role="navigation">
+  <nav id="jsStickyMenu" class="site-navigation text-right text-md-center top-0 left-0 w-100 bg-white transition-normal overflow-hidden" role="navigation">
     <div class="container">
       <ul class="site-menu js-clone-nav d-none d-md-block">
         <template v-for="(item, index) in menuList">
